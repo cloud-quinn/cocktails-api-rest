@@ -18,9 +18,12 @@ npm i
 npm start
 ```
 Endpoints
+
 http://localhost:4000/cocktails
-localhost:4000/cocktailsByIngredient/:ingredient
-localhost:4000/cocktailsWithMaxUnits/:maxUnits
+
+http://localhost:4000/cocktailsByIngredient/:ingredient
+
+http://localhost:4000/cocktailsWithMaxUnits/:maxUnits
 
 Of course, you can use any tool you like for testing, but I have provided a Postman Collection to help, if you would like.
 
