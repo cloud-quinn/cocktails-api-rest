@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "7d91a838-e9ff-4d08-acae-9d488ca24c5b",
+		"name": "Cocktails API (REST)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:4000/cocktails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:4000/cocktails",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"cocktails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/cocktailsByIngredient/:ingredient",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:4000/cocktailsByIngredient/gin",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"cocktailsByIngredient",
+						"gin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/cocktailsWithMaxUnits/:maxUnits",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:4000/cocktailsWithMaxUnits/3.0",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"cocktailsWithMaxUnits",
+						"3.0"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,16 @@
+{
+    "name": "cocktails-api-rest",
+    "version": "1.0.0",
+    "description": "A POC using REST to return basic cocktail information such as suggested ingredients and approximate alcohol units per serving",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "jest --coverage"
+    },
+    "author": "Cloud Quinn",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "jest": "^25.4.0"
+    }
+}
