@@ -1,4 +1,4 @@
-const { getCocktails, getByIngredient, getWithMaxUnits } = require('./cocktails');
+const { getCocktails, getByIngredient, getWithMaxUnits, sanitiseData } = require('./cocktails');
 
 jest.mock('./data.json', () => ([
     {
@@ -70,5 +70,34 @@ describe('Get Cocktails By Maximum Alcohol Units', () => {
 describe('Get Cocktails By Maximum Alcohol Units: Invalid input', () => {
     it('throws an error', () => {
         expect(() => getWithMaxUnits("one point five")).toThrow();
+    });
+});
+
+describe('Sanitise data', () => {
+    let sanitisedData;
+
+    const mockData = [{
+        testProperty: 'test value',
+        testProperty2: 'test value 2',
+    },
+    {
+        testProperty: 'test value',
+        testProperty2: 'test value 2',
+    }];
+
+    it('returns all properties if no schema is defined', () => {
+        sanitisedData = sanitiseData(mockData);
+        expect(sanitisedData).toEqual(mockData);
+    });
+    
+    it('removes properties not in the defined schema', () => {
+        const expected = [{
+            testProperty2: 'test value 2',
+        },
+        {
+            testProperty2: 'test value 2',
+        }];
+        sanitisedData = sanitiseData(mockData, { testProperty2: 'string' });
+        expect(sanitisedData).toEqual(expected);
     });
 });
